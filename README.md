@@ -11,7 +11,7 @@ $ docker-compose up --build -d
 
 Docker compose 3.5+ is required (Docker engine 17.12.0+).
 
-The API endpoint will be available at your localhost port 80.
+The API endpoint will be available at your **localhost port 80**.
 
 ## Loading shipping rates data
 Get inside the quotes API container by running in your terminal:
@@ -41,3 +41,16 @@ Then, to start the tests, run:
 ```bash
 $ pytest -v tests
 ```
+
+## API Docs
+You can view API's web documentation through the route `/v1/docs`
+
+## Technologies used
+* Web framework: Flask
+* REST API framework: Flask Smorest
+    * Marshmallow
+    * Apispec (OpenAPI)
+* Database: PostgreSQL
+* Database toolkit: SQLAlchemy
+* Testing: pytest
+* Production WSGI: Gunicorn
