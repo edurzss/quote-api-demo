@@ -22,7 +22,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret_pass
       POSTGRES_DB: bookairfreight
-    # volumes:
-    #   - ./pgdata:/var/lib/postgresql/data # To allow data persistency
+    volumes: 
+      - ./pgdata:/var/lib/postgresql/data
     ports:
-      - "54323:5432" # To allows connection from outside the container for development purposes
+      - "54323:5432" # To allow connections from outside the container for development purposes

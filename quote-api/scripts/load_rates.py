@@ -1,3 +1,7 @@
+"""
+Script to load rates from a json file to the PostgreSQL database.
+Intependent from Flask app.
+"""
 import os, json
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import (

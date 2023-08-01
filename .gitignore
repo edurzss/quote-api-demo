@@ -1,7 +1,8 @@
 # Project files and folders
 api.yml
 rates.json
-
+# Database folders
+pgdata/
 # Temporary folders
 tmp/
 

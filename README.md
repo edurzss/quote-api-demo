@@ -27,7 +27,11 @@ $ python scripts/load_rates.py
 
 Note: The rates file must be in JSON format and the name `rates.json` in the `/src` folder of the container (`/quote-api` folder in host).
 
-## Integrations Tests (optional)
+Warning: Run the script only once, otherwise, data will be added multiple times.
+
+Data will be persisted in `pgdata/` folder.
+
+## Unit Tests
 You must have the full app running.
 
 Again, get inside the quotes API container, if not already, by running in your terminal:
@@ -42,8 +46,24 @@ Then, to start the tests, run:
 $ pytest -v tests
 ```
 
+## Integration Test
+You must have the full app running and the following libraries installed in your local environment:
+- requests
+- pytest
+
+You can install them using the file `tests/requirements.txt` with:
+
+```bash
+$ pip install -r tests/requirements.txt
+```
+
+Then, from the project's root folder run:
+```bash
+$ pytest -v tests
+```
+
 ## API Docs
-You can view API's web documentation through the route `/v1/docs`
+API's web documentation is available through the route `/v1/docs`
 
 ## Technologies used
 * Web framework: Flask
