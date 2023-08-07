@@ -19,9 +19,9 @@ services:
     image: postgres:15.3
     restart: always
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secret_pass
-      POSTGRES_DB: bookairfreight
+      POSTGRES_USER: admin  # Your database user
+      POSTGRES_PASSWORD: secret_pass # Your database password
+      POSTGRES_DB: bookairfreight # Your database name
     volumes: 
       - ./pgdata:/var/lib/postgresql/data
     ports:
